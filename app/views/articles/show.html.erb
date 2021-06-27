@@ -8,10 +8,8 @@
                   method: :delete,
                   data: { confirm: "Are you sure?" } %></li>
 </ul>
-
-
+<% unless @article.comments %>
 <h2>Comments</h2>
+<% end %>
 <%= render @article.comments %>
-
-<h2>Add a comment:</h2>
 <%= render 'comments/form' %>

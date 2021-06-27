@@ -1,4 +1,7 @@
 class CommentsController < ApplicationController
+  # Basic authentication
+  http_basic_authenticate_with name: "admin", password: "secretpassword", only: :destroy
+
   # Find article by id, calls comments.create, redirects to article_path
   def create
     @article = Article.find(params[:article_id])

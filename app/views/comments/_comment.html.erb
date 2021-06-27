@@ -2,14 +2,32 @@
   <strong>Commenter:</strong>
   <%= comment.commenter %>
 </p>
-
 <p>
   <strong>Comment:</strong>
   <%= comment.body %>
 </p>
-
 <p>
-  <%= link_to 'Destroy Comment', [comment.article, comment],
-              method: :delete,
-              data: { confirm: "Are you sure?" } %>
+  <strong>Rating:</strong>
+  <%= comment.rating %>
 </p>
+
+<div class="card text-dark bg-light mb-3" style="max-width: 18rem;">
+  <h5 class="card-header">Name: <%= comment.commenter %></h5>
+  <div class="card-body">
+    <h5 class="card-title">Rating: <%= comment.rating %></h5>
+    <p class="card-text"><%= comment.body %><br>          
+    <%= link_to 'Delete', [comment.article, comment],
+                      method: :delete,
+                      data: { confirm: "Are you sure?" } %>
+    </p>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
