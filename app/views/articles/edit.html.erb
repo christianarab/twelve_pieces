@@ -1,5 +1,4 @@
-<h1>New Article</h1>
-
+<h1>Edit Post:</h1>
 <%= form_with model: @article do |form| %>
   <div>
     <%= form.label :title %><br>
@@ -18,6 +17,6 @@
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit "Submit edit" %>
   </div>
 <% end %>
