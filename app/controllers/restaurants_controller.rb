@@ -4,6 +4,7 @@ class RestaurantsController < ApplicationController
   # GET /restaurants or /restaurants.json
   def index
     @restaurants = Restaurant.all
+    @restaurants = @restaurants.all.filter_by_cuisine(params[:cuisine]) if params[:cuisine].present?
   end
 
   # GET /restaurants/1 or /restaurants/1.json

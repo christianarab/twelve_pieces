@@ -1,6 +1,6 @@
-<p id="notice"><%= notice %></p>
 
 <h1>Restaurants</h1>
+
 
 <table>
   <thead>
@@ -18,7 +18,7 @@
     <% @restaurants.each do |restaurant| %>
       <tr>
         <td><%= restaurant.name %></td>
-        <td><%= restaurant.cuisine %></td>
+        <td><a href="/restaurants?cuisine=<%= restaurant.cuisine %>"><%= restaurant.cuisine %></a></td>
         <td><%= restaurant.location %></td>
         <td><%= restaurant.description %></td>
         <td><%= restaurant.rating %></td>
