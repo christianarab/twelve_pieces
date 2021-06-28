@@ -25,6 +25,7 @@
 #
 #
 Rails.application.routes.draw do
+  resources :restaurants
   root 'articles#index'
   resources :articles do
     resources :comments
