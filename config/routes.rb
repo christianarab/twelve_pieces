@@ -25,6 +25,7 @@
 #
 #
 Rails.application.routes.draw do
+  get 'static_pages/about'
   resources :restaurants
   root 'articles#index'
   resources :articles do
